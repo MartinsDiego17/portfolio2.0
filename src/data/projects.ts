@@ -7,7 +7,7 @@ export const projects = [
         title: "La Barra Boulevard",
         quantity: 1,
         image: labarra,
-        description: /* currentLenguaje === "es"
+        description: /* currentLengaje === "es"
             ? */ "La barra boulevard es hasta ahora mi proyecto más importante. Se trata de un e-commerce full-stack desarrollado para un restaurante de Chile, que cuenta con una navegación muy intuitiva y una gestión de base de datos sólida."
             /* : "A Pokédex developed with the Poke-Api, offering user-friendly features like registration, login forms, and Pokémon creation. Enhanced with sorting, filtering, and search options, it provides a comprehensive and engaging experience." */,
         stack: ['Javascript', 'Next', 'React'],
