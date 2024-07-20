@@ -1,0 +1,33 @@
+---
+import ContactoData from "../components/datacontact/ContactoData";
+import FormularioData from "../components/datacontact/FormularioData";
+---
+
+<div class="contactContainer mt-[30%] border-t-1 border-[#333]">
+    <section class="w-[70%] mx-auto h-[65vh] py-[0%] flex justify-between">
+        <ContactoData client:visible />
+        <FormularioData client:visible />
+    </section>
+</div>
+
+<style is:global>
+    .contactContainer {
+        background: linear-gradient(
+            to right top,
+            rgba(14, 14, 14, 0.75),
+            rgba(34, 34, 34, 0.75)
+        );
+        backdrop-filter: blur(15px);
+    }
+    .formContact {
+        background: linear-gradient(
+            to right top,
+            rgba(14, 14, 14, 0.75),
+            rgba(34, 34, 34, 0.75)
+        );
+        box-shadow: 0px 0px 3px #444 inset;
+    }
+    .redes a {
+        margin-right: 4%;
+    }
+</style>

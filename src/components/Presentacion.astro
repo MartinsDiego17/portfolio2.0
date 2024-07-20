@@ -1,0 +1,92 @@
+---
+import MyDetails from "./inicio/MyDetails";
+import photoPerfil from "../../public/images/presentacion/perfil.webp";
+---
+
+<div   class="w-screen h-screen flex flex-col justify-center">
+    <div class="mt-[10%] w-[70%] mx-auto h-[70%]">
+        <section  class="flex justify-between align-middle">
+            <MyDetails client:visible />
+
+            <article class="w-[35%] flex align-middle justify-end">
+                <img
+                    class="imgPerfil w-3/5 h-[70%] rounded-full"
+                    src={photoPerfil.src}
+                    alt="Diego Martins"
+                />
+            </article>
+        </section>
+    </div>
+</div>
+
+<style is:global>
+    h2 {
+        font-weight: 900 !important;
+    }
+
+    .redes p {
+        display: flex;
+        align-items: center;
+    }
+
+    button {
+        background-color: #222;
+        color: #ccc;
+        padding: .7% 2%;
+        opacity: 0.6;
+        border-radius: 30px;
+        transition: 0.2s;
+        font-size: 1rem;
+        margin-right: 1.2%;
+    }
+
+    button:hover {
+        opacity: 1;
+        color: #eee;
+    }
+
+    button a {
+        display: flex;
+        align-items: center;
+    }
+
+    button a span {
+        padding-left: 0.4vw;
+        font-size: 0.7rem;
+        margin: auto auto;
+    }
+
+    @keyframes radiusPic {
+        0%,
+        100% {
+            border-radius: 48% 52% 55% 45% / 31% 48% 52% 69%;
+        }
+
+        25% {
+            border-radius: 50% 50% 72% 28% / 48% 56% 44% 52%;
+        }
+        50% {
+            border-radius: 57% 43% 72% 28% / 33% 74% 26% 67%;
+        }
+        75% {
+            border-radius: 50% 50% 72% 28% / 48% 56% 44% 52%;
+        }
+        30% {
+            border-radius: 60% 40% 55% 45% / 25% 65% 35% 75%;
+        }
+        60% {
+            border-radius: 40% 60% 50% 50% / 60% 40% 55% 45%;
+        }
+        90% {
+            border-radius: 55% 45% 40% 60% / 75% 25% 65% 35%;
+        }
+        15% {
+            border-radius: 65% 35% 50% 50% / 40% 60% 50% 50%;
+        }
+    }
+
+    .imgPerfil {
+        animation: radiusPic 17s infinite;
+    }
+
+</style>

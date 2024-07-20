@@ -1,0 +1,111 @@
+---
+interface Experiencia {
+    name: string;
+    date: string;
+    title: string;
+    description: string;
+    habilities: string[];
+    type: string;
+    link: string;
+}
+
+import "@fortawesome/fontawesome-free/css/all.css";
+import Card from "./experiencia/Card";
+
+const experiencias: Experiencia[] = [
+    {
+        name: "La barra boulevard",
+        date: "Actualmente...",
+        title: "Desarrollador full-stack",
+        description:
+            "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos.",
+        habilities: ["desarrollo web", "base de datos", "diseño full-stack"],
+        type: "laboral",
+        link: "https://www.instagram.com/labarraboulevard/",
+    },
+    {
+        name: "La barra boulevard",
+        date: "2023 - 2024",
+        title: "Ayudante de cocina",
+        description:
+            "En el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia.",
+        habilities: ["gestión del tiempo", "organización", "trabajo en equipo"],
+        type: "laboral",
+        link: "https://www.instagram.com/labarraboulevard/",
+    },
+    {
+        name: "La barra boulevard",
+        date: "2023 - 2024",
+        title: "Mesero",
+        description:
+            "En este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar múltiples habilidades comunicativas.",
+        habilities: [
+            "atención al cliente",
+            "comunicación efectiva",
+            "resolución de conflictos",
+        ],
+        type: "laboral",
+        link: "https://www.instagram.com/labarraboulevard/",
+    },
+];
+---
+
+<div
+    class="mt-[10%] h-screen w-[70%] mx-auto flex flex-col justify-center pt-[5%] align-middle"
+>
+    <h2 id="titleSection">
+        <i class="fa-solid fa-briefcase opacity-50"></i> Experiencia laboral
+    </h2>
+    <ol class="mt-[2%]">
+        {
+            experiencias.map((experience: Experiencia) => (
+                <li>
+                    <Card {...experience} />
+                </li>
+            ))
+        }
+    </ol>
+</div>
+
+<style is:global>
+    #titleSection {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #eee;
+        text-align: center;
+    }
+
+    .cardContainer {
+        background: linear-gradient(
+            to right top,
+            rgba(14, 14, 14, 0.75),
+            rgba(34, 34, 34, 0.75)
+        );
+        position: relative;
+        backdrop-filter: blur(5px);
+        font-family: "onest";
+        box-shadow: 0px 0px 5px inset #444;
+    }
+
+    .cardContainer:hover {
+        background: linear-gradient(
+            to right top,
+            rgba(14, 14, 14, 0.75),
+            rgba(36, 36, 36, 0.75)
+        );
+    }
+
+    .cardContainer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: blur(100px);
+    }
+    .cardContainer .hab {
+        box-shadow: 0px 0px 2px inset #333;
+        }
+</style>

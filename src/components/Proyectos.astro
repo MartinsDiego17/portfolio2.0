@@ -1,0 +1,85 @@
+---
+import { Button } from "@nextui-org/react";
+import { projects } from "../data/projects";
+import "@fortawesome/fontawesome-free/css/all.css";
+---
+
+<div class="mt-[20%]">
+    <h2 id="titleSection">
+        <i class="fa-solid fa-diagram-project opacity-50"></i> Proyectos recientes
+    </h2>
+    <ul class="mt-[4%]">
+        {
+            projects.map((project) => (
+                <li class="w-[75%] mx-auto mb-[5%] flex">
+                    <article class="w-1/2">
+                        <img
+                            class="w-full h-[40vh] rounded-2xl"
+                            src={project.image.src}
+                            alt={project.title}
+                        />
+                    </article>
+
+                    <article class="w-1/2 pl-[3%]">
+                        <h2 class="text-[1.4rem] text-[#ddd]">
+                            {project.title}
+                        </h2>
+                        <ul class="flex justify-start mt-[2%]">
+                            {project.stack.map((hab) => (
+                                <p
+                                    class={`mr-[2%] rounded-md opacity-80 text-[.8rem] py-[.7%] px-[3%] text-black ${hab}`}
+                                >
+                                    {hab}
+                                </p>
+                            ))}
+                        </ul>
+                        <p class="mt-[2%] text-balance text-[#ccc]">
+                            {project.description}
+                        </p>
+                        <a href={project.github} target="_blank">
+                            <Button
+                                className="mt-[2%] opacity-100 text-[#8ed2ff]"
+                                color="primary"
+                                variant="flat"
+                                client:visible
+                            >
+                                <i class="fa-brands fa-github" /> Código
+                            </Button>
+                        </a>
+                        {project.deploy && (
+                            <a href={project.deploy} target="_blank">
+                                <Button
+                                    className="mt-[2%] opacity-100 text-[#8ed2ff]"
+                                    color="primary"
+                                    variant="flat"
+                                    client:visible
+                                >
+                                    <i class="fa-solid fa-link" /> Demo
+                                </Button>
+                            </a>
+                        )}
+                    </article>
+                </li>
+            ))
+        }
+    </ul>
+</div>
+
+<style>
+    .Javascript {
+        background-color: #eacc25;
+        color: black;
+    }
+    .Next {
+        background-color: black;
+        color: white;
+    }
+    .React {
+        background-color: #09f;
+        color: white;
+    }
+    .Vite {
+        background-color: #d511e8;
+        color: white;
+    }
+</style>

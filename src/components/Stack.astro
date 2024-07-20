@@ -1,0 +1,41 @@
+---
+import { technologies } from "../data/technologies";
+---
+
+<div class="h-screen w-[70%] mx-auto flex flex-col justify-center mt-[15%]">
+    <h2 id="titleSection">
+        <i class="fa-solid fa-computer opacity-50"></i> Tecnologías
+    </h2>
+
+    <ul class="mt-[4%] grid grid-cols-4 gap-[3%] w-[60%] mx-auto">
+        {
+            technologies.map((tech) => {
+                const IconComponent = tech.image;
+                return (
+                    <a href={tech.link} target="_blank">
+                        <li class="text-[#aaa] flex flex-col justify-center align-middle py-[25%] hover:text-[#eee] transition duration-150">
+                            <p class="text-[2rem] flex justify-center mb-[10%]">
+                                <IconComponent />
+                            </p>
+                            <p class="text-[.9rem] text-center">{tech.name}</p>
+                        </li>
+                    </a>
+                );
+            })
+        }
+    </ul>
+</div>
+
+<style>
+    svg {
+        font-size: 2rem;
+    }
+    li {
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+        box-shadow: 0px 0px 7px inset #444;
+    }
+    li:hover {
+        box-shadow: 0px 0px 20px inset #555;
+    }
+</style>

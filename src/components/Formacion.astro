@@ -1,0 +1,51 @@
+---
+interface Formacion {
+    name: string;
+    date: string;
+    title: string;
+    description: string;
+    habilities: string[];
+    link: string;
+}
+
+import "@fortawesome/fontawesome-free/css/all.css";
+import Card from "./experiencia/Card";
+
+const formaciones: Formacion[] = [
+    {
+        name: "Universidad de Ezeiza",
+        date: "2024 - actual",
+        title: "Tecnicatura en desarrollo de software",
+        description:
+            "Actualmente en esta carrera me estoy capacitando como desarrollador de software aprendiendo y reforzando las buenas prácticas y conceptos generales de la programación.",
+        habilities: ["programación", "computación", "software"],
+        link: "https://web.upe.edu.ar/",
+    },
+    {
+        name: "Soy Henry",
+        date: "2023 - 2023",
+        title: "Full-stack developer",
+        description:
+            "En este curso intensivo de desarrollo web tuve la oportunidad de desarrollar múltiples habilidades web y conceptos de programación generales.",
+        habilities: ["frontend", "backend", "base de datos"],
+        link: "https://www.soyhenry.com/",
+    },
+];
+---
+
+<div
+    class="h-screen w-[70%] mt-[20%] mx-auto flex flex-col justify-center pt-[5%] align-middle"
+>
+    <h2 id="titleSection">
+        <i class="fa-solid fa-book opacity-50"></i> Formación académica
+    </h2>
+    <ol class="mt-[2%]">
+        {
+            formaciones.map((form: Formacion) => (
+                <li>
+                    <Card {...form} />
+                </li>
+            ))
+        }
+    </ol>
+</div>
