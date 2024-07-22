@@ -2,12 +2,12 @@
 import { technologies } from "../data/technologies";
 ---
 
-<div class="h-screen w-[70%] mx-auto flex flex-col justify-center mt-[15%]">
+<div class="h-screen w-[70%] mx-auto flex flex-col mb-[45vh]  max-sm:w-4/5">
     <h2 id="titleSection">
         <i class="fa-solid fa-computer opacity-50"></i> Tecnologías
     </h2>
 
-    <ul class="mt-[4%] grid grid-cols-4 gap-[3%] w-[60%] mx-auto">
+    <ul class="grid grid-cols-4 gap-[3%] w-[60%] max-sm:w-[100%] mx-auto">
         {
             technologies.map((tech) => {
                 const IconComponent = tech.image;
@@ -17,7 +17,7 @@ import { technologies } from "../data/technologies";
                             <p class="text-[2rem] flex justify-center mb-[10%]">
                                 <IconComponent />
                             </p>
-                            <p class="text-[.9rem] text-center">{tech.name}</p>
+                            <p class="text-[.9rem] max-sm:text-[.8rem] text-center">{tech.name}</p>
                         </li>
                     </a>
                 );

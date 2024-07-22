@@ -1,67 +1,25 @@
 ---
-import { MdOutlineWbSunny } from "react-icons/md";
-import LenguajeIcon from "./LenguajeIcon";
+import HeaderNav from "./header/HeaderNav";
 ---
 
-<div class="w-screen flex justify-center fixed pt-[10px]">
-    <nav class="w-[40%] rounded-full text-[#ddd]">
-        <ul class="py-[2%] px-[5%] flex justify-between">
-            <li
-                class="text-[.9rem] cursor-pointer transition duration-200 hover:text-white"
-            >
-                Inicio
-            </li>
-            <li
-                class="text-[.9rem] cursor-pointer transition duration-200 hover:text-white"
-            >
-                Acerca de mí
-            </li>
-            <li
-                class="text-[.9rem] cursor-pointer transition duration-200 hover:text-white"
-            >
-                Proyectos
-            </li>
-            <li
-                class="place-content-center text-[.9rem] cursor-pointer transition duration-200 hover:text-white"
-            >
-                <MdOutlineWbSunny />
-            </li>
-            <li
-                class="text-[.9rem] cursor-pointer transition duration-200 hover:text-white"
-            >
-                <LenguajeIcon />
-            </li>
-        </ul>
-    </nav>
-</div>
+<HeaderNav  client:visible/>
 
-<style>
+<style is:global>
     @keyframes blurnav {
         100% {
-            margin-top: 10px;
-            background: linear-gradient(
-                to top right,
-                rgba(13, 13, 13, 0.35),
-                rgba(26, 26, 26, 0.35),
-                rgba(51, 51, 51, 0.35),
-                rgba(77, 77, 77, 0.35),
-                rgba(102, 102, 102, 0.35)
-            );
+            background: rgba(0,0,0,0.5);
             -webkit-backdrop-filter: blur(30px);
             backdrop-filter: blur(30px);
             transition: 0.3s;
-            box-shadow: 0px 0px 7px #555;
+            border-color: #222;
         }
         }
 
-    nav {
+    #navbar-container {
         animation: blurnav linear both;
         animation-timeline: scroll();
         animation-range: 0 500px;
         transition: 0.2s;
     }
 
-    nav:hover {
-        opacity: 1 !important;
-    }
 </style>

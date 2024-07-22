@@ -3,8 +3,8 @@ import React from 'react'
 
 const FormularioData = () => {
   return (
-    <article className='w-1/2 flex justify-end items-center'>
-      <form className='formContact w-4/5 bg-[#222] h-fit rounded-xl p-[4%]'>
+    <article className='w-1/2 flex justify-end max-sm:justify-center max-sm:mt-[15%] items-center max-sm:w-full'>
+      <form className='formContact w-4/5 max-sm:w-full bg-[#222] h-fit rounded-xl p-[4%]'>
         <Input type="text" className='dark h-[2vh]' label="Nombre" />
         <Input type="email" className='dark h-[2vh] mt-[12%]' label="Email" />
         <Textarea

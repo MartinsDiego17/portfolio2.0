@@ -3,12 +3,12 @@ import MyDetails from "./inicio/MyDetails";
 import photoPerfil from "../../public/images/presentacion/perfil.webp";
 ---
 
-<div   class="w-screen h-screen flex flex-col justify-center">
-    <div class="mt-[10%] w-[70%] mx-auto h-[70%]">
-        <section  class="flex justify-between align-middle">
+<div class="w-screen h-screen flex flex-col justify-center max-sm:h-[110vh] mb-[20vh] ">
+    <div class="mt-[10%] w-[70%] mx-auto h-[70%] max-sm:w-[80%] ">
+        <section class="flex justify-between align-middle">
             <MyDetails client:visible />
 
-            <article class="w-[35%] flex align-middle justify-end">
+            <article class="w-[35%] flex align-middle justify-end max-sm:hidden">
                 <img
                     class="imgPerfil w-3/5 h-[70%] rounded-full"
                     src={photoPerfil.src}
@@ -32,7 +32,7 @@ import photoPerfil from "../../public/images/presentacion/perfil.webp";
     button {
         background-color: #222;
         color: #ccc;
-        padding: .7% 2%;
+        padding: 0.7% 2%;
         opacity: 0.6;
         border-radius: 30px;
         transition: 0.2s;
@@ -88,5 +88,4 @@ import photoPerfil from "../../public/images/presentacion/perfil.webp";
     .imgPerfil {
         animation: radiusPic 17s infinite;
     }
-
 </style>

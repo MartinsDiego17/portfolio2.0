@@ -11,6 +11,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Onest', ...defaultTheme.fontFamily.serif],
+        'max-sm': {'max': '640px'}, 
+        'max-lg': {'max': '1023px'},
       },
     },
   },
