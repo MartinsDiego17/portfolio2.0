@@ -1,12 +1,40 @@
 ---
 import ContactoData from "../components/datacontact/ContactoData";
 import FormularioData from "../components/datacontact/FormularioData";
+
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface Form {
+    firstInputPlaceholder: string;
+    secondInputPlaceholder: string;
+    textareaTitle: string;
+    textareaPlaceholder: string;
+    textButton: string;
+}
+
+interface ContactInterface {
+    smallTitle: string;
+    bigTitle: string;
+    text: string;
+    form: Form;
+}
+
+interface I18N {
+    Contact: ContactInterface;
+}
+const i18nTyped = i18n as I18N;
+const dataContact = i18nTyped.Contact;
+const { form } = dataContact;
 ---
 
 <div class="contactContainer mt-[30%] border-t-1 max-sm:py-[5vh] border-[#222]">
-    <section class="w-[70%] max-sm:w-[80%] 2xl:h-[47vh] mx-auto h-[65vh] py-[0%] max-sm:block flex justify-between">
-        <ContactoData client:visible />
-        <FormularioData client:visible />
+    <section
+        class="w-[70%] max-sm:w-[80%] 2xl:h-[47vh] mx-auto h-[65vh] py-[0%] max-sm:block flex justify-between"
+    >
+        <ContactoData {...dataContact} client:visible />
+        <FormularioData {...form} client:visible />
     </section>
 </div>
 

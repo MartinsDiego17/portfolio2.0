@@ -8,52 +8,35 @@ interface Experiencia {
     type: string;
     link: string;
 }
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface PropsExperience {
+    title: string;
+    FirstExperience: Experiencia
+    SecondExperience: Experiencia
+    ThirdExperience: Experiencia
+}
+interface I18N {
+    Experience: PropsExperience;
+}
+const i18nTyped = i18n as I18N;
+const { Experience } = i18nTyped;
+const experiencias = [
+    Experience.FirstExperience,
+    Experience.SecondExperience,
+    Experience.ThirdExperience,
+];
 
 import Card from "./experiencia/Card";
-
-const experiencias: Experiencia[] = [
-    {
-        name: "La barra boulevard",
-        date: "Actualmente...",
-        title: "Desarrollador full-stack",
-        description:
-            "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos.",
-        habilities: ["desarrollo web", "base de datos", "diseño full-stack"],
-        type: "laboral",
-        link: "https://www.instagram.com/labarraboulevard/",
-    },
-    {
-        name: "La barra boulevard",
-        date: "2023 - 2024",
-        title: "Ayudante de cocina",
-        description:
-            "En el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia.",
-        habilities: ["gestión del tiempo", "organización", "trabajo en equipo"],
-        type: "laboral",
-        link: "https://www.instagram.com/labarraboulevard/",
-    },
-    {
-        name: "La barra boulevard",
-        date: "2023 - 2024",
-        title: "Mesero",
-        description:
-            "En este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar múltiples habilidades comunicativas.",
-        habilities: [
-            "atención al cliente",
-            "comunicación efectiva",
-            "resolución de conflictos",
-        ],
-        type: "laboral",
-        link: "https://www.instagram.com/labarraboulevard/",
-    },
-];
 ---
 
 <div
     class="h-fit mb-[45vh] max-sm:mb-[20vh] w-[70%] max-sm:w-[80%] mx-auto flex flex-col justify-center align-middle"
 >
     <h2 class="titleSection">
-        <i class="fa-solid fa-briefcase opacity-50"></i> Experiencia laboral
+        <i class="fa-solid fa-briefcase opacity-50"></i> { Experience.title }
     </h2>
     <ol>
         {
@@ -113,5 +96,5 @@ const experiencias: Experiencia[] = [
     }
     .cardContainer .hab {
         box-shadow: 0px 0px 2px inset #333;
-        }
+    }
 </style>

@@ -1,10 +1,25 @@
 ---
 import { technologies } from "../data/technologies";
+
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface StackInterface {
+    title : string
+}
+
+interface I18N {
+    Stack: StackInterface
+}
+const i18nTyped = i18n as I18N;
+const title = i18nTyped.Stack.title;
+
 ---
 
 <div class="h-fit w-[70%] max-sm:mb-[35vh] mx-auto flex flex-col mb-[45vh]  max-sm:w-4/5">
     <h2 class="titleSection">
-        <i class="fa-solid fa-computer opacity-50"></i> Tecnologías
+        <i class="fa-solid fa-computer opacity-50"></i> {title}
     </h2>
 
     <ul class="grid grid-cols-4 gap-[3%] 2xl:gap-[4.5%] w-[60%] max-sm:w-[100%] mx-auto">

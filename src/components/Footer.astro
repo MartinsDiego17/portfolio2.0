@@ -1,8 +1,24 @@
+---
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface FooterInterface {
+    text : string
+}
+
+interface I18N {
+    Footer: FooterInterface
+}
+const i18nTyped = i18n as I18N;
+const text = i18nTyped.Footer.text;
+---
+
 <div id="footer" class="border-t-1 max-sm:py-[3vh] max-sm:p border-[#222] py-[1%] leading-none text-[#aaa] text-center">
     <a href="https://www.linkedin.com/in/diego-martins-563954278/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     <a href="https://github.com/MartinsDiego17"><i class="fa-brands fa-github"></i></a>
     <a href="mailto:diegomartinsupe@hotmail.com"><i class="fa-solid fa-envelope"></i> </a> <br />
-    <p class="mt-[1%]   ">Made with ♥ by Diego Martins</p> 
+    <p class="mt-[1%]   ">{text}</p> 
 </div>
 
 <style>

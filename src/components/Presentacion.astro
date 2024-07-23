@@ -1,6 +1,24 @@
 ---
 import MyDetails from "./inicio/MyDetails";
 import photoPerfil from "../../public/images/presentacion/perfil.webp";
+
+import { getI18N } from "../lenguajes";
+const { currentLocale } : any = Astro;
+const i18n = getI18N({ currentLocale });
+interface I18N {
+	Presentation: Record<string, string>;
+}
+interface PropsPresentation {
+    smallText: String
+    bigText: String
+    developer: String
+    paragraph: String
+    openToWork:String
+    buttonDownload: String
+    buttonPreview: String
+}
+const i18nTyped = i18n as I18N & { Presentation: PropsPresentation };
+
 ---
 
 <div
@@ -9,7 +27,7 @@ id="inicio"
 >
     <div class="mt-[10%] w-[70%] mx-auto h-[70%] max-sm:w-[80%]">
         <section class="flex justify-between align-middle">
-            <MyDetails client:visible />
+            <MyDetails {...i18nTyped.Presentation} client:visible />
 
             <article
                 class="w-[35%] flex align-middle justify-end max-sm:hidden"

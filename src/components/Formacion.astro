@@ -1,4 +1,7 @@
 ---
+import "@fortawesome/fontawesome-free/css/all.css";
+import Card from "./experiencia/Card";
+
 interface Formacion {
     name: string;
     date: string;
@@ -7,37 +10,32 @@ interface Formacion {
     habilities: string[];
     link: string;
 }
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
 
-import "@fortawesome/fontawesome-free/css/all.css";
-import Card from "./experiencia/Card";
-
-const formaciones: Formacion[] = [
-    {
-        name: "Universidad de Ezeiza",
-        date: "2024 - actual",
-        title: "Tecnicatura en desarrollo de software",
-        description:
-            "Actualmente en esta carrera me estoy capacitando como desarrollador de software aprendiendo y reforzando las buenas prácticas y conceptos generales de la programación.",
-        habilities: ["programación", "computación", "software"],
-        link: "https://web.upe.edu.ar/",
-    },
-    {
-        name: "Soy Henry",
-        date: "2023 - 2023",
-        title: "Full-stack developer",
-        description:
-            "En este curso intensivo de desarrollo web tuve la oportunidad de desarrollar múltiples habilidades web y conceptos de programación generales.",
-        habilities: ["frontend", "backend", "base de datos"],
-        link: "https://www.soyhenry.com/",
-    },
+interface PropsFormation {
+    title: string;
+    FirstFormation: Formacion;
+    SecondFormation: Formacion;
+}
+interface I18N {
+    Formation: PropsFormation;
+}
+const i18nTyped = i18n as I18N;
+const { Formation } = i18nTyped;
+const formaciones  : Formacion[] = [
+    Formation.FirstFormation,
+    Formation.SecondFormation,
 ];
+
 ---
 
 <div
     class="h-fit w-[70%] mb-[45vh] max-sm:mb-[30vh] max-sm:w-4/5 max-sm:mt-[30vh] mx-auto flex flex-col justify-center align-middle"
 >
     <h2 class="titleSection">
-        <i class="fa-solid fa-book opacity-50"></i> Formación académica
+        <i class="fa-solid fa-book opacity-50"></i> {Formation.title}
     </h2>
     <ol>
         {

@@ -1,8 +1,22 @@
 ---
 import HeaderNav from "./header/HeaderNav";
+
+import { getI18N } from "../lenguajes";
+const { currentLocale } : any = Astro;
+const i18n = getI18N({ currentLocale });
+interface I18N {
+	Header: Record<string, string>;
+}
+interface PropsHeader {
+    home: String
+    projects: String
+    contact: String
+}
+const i18nTyped = i18n as I18N & { Header: PropsHeader };
+
 ---
 
-<HeaderNav  client:visible/>
+<HeaderNav {...i18nTyped.Header} client:only/>   
 
 <style is:global>
     @keyframes blurnav {

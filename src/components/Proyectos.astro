@@ -1,12 +1,62 @@
 ---
 import { Button } from "@nextui-org/react";
-import { projects } from "../data/projects";
 import "@fortawesome/fontawesome-free/css/all.css";
+
+import labarra from '../../public/images/proyectos/labarra.jpeg';
+import vorttex from '../../public/images/proyectos/vorttex.jpeg';
+import pokedex from '../../public/images/proyectos/pokedex.jpeg';
+
+interface Proyecto {
+    title: string;
+    quantity: number;
+    description: string;
+    stack: string[];
+    buttonDemo: string;
+    buttonCode: string;
+    github: string;
+    deploy?: string;
+}
+
+interface ProyectoConImagenes extends Proyecto {
+    image?: any;
+}
+
+const imagesProjects = [labarra.src, vorttex.src, pokedex.src];
+
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+
+interface PropsProjects {
+    title: string
+    project1: Proyecto  
+    project2: Proyecto  
+    project3: Proyecto  
+}
+
+interface I18N {
+    Projects: PropsProjects;
+}
+const i18nTyped = i18n as I18N;
+const { Projects } = i18nTyped;
+let projects: ProyectoConImagenes[] = [
+    Projects.project1,
+    Projects.project2,
+    Projects.project3,
+];
+
+projects.forEach((pro, index) => {
+    pro.image = imagesProjects[index];
+});
+
 ---
 
-<div id="proyectos" class="mb-[45vh] max-sm:mb-[20vh] max-sm:w-[90%] max-sm:mx-auto">
+<div
+    id="proyectos"
+    class="mb-[45vh] max-sm:mb-[20vh] max-sm:w-[90%] max-sm:mx-auto"
+>
     <h2 class="titleSection">
-        <i class="fa-solid fa-diagram-project opacity-50"></i> Proyectos recientes
+        <i class="fa-solid fa-diagram-project opacity-50"></i> { Projects.title }
     </h2>
     <ul>
         {
@@ -15,7 +65,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
                     <article class="w-1/2 max-sm:w-[100%] 2xl:flex 2xl:justify-end">
                         <img
                             class="w-full h-[40vh] 2xl:w-[90%] 2xl:h-[36vh] max-sm:h-[20vh] rounded-2xl"
-                            src={project.image.src}
+                            src={project.image}
                             alt={project.title}
                         />
                     </article>
@@ -43,7 +93,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
                                 variant="flat"
                                 client:visible
                             >
-                                <i class="fa-brands fa-github" /> Código
+                                <i class="fa-brands fa-github" /> { project.buttonCode }
                             </Button>
                         </a>
                         {project.deploy && (
@@ -54,7 +104,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
                                     variant="flat"
                                     client:visible
                                 >
-                                    <i class="fa-solid fa-link" /> Demo
+                                    <i class="fa-solid fa-link" /> { project.buttonDemo }
                                 </Button>
                             </a>
                         )}

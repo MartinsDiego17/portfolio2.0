@@ -8,36 +8,143 @@
 		"contact": "Contacto"
 	},
 	"Presentation": {
-		"smallText" : "Hola, mi nombre es",
-		"bigText" :"Diego Martins",
+		"smallText": "Hola, mi nombre es",
+		"bigText": "Diego Martins",
 		"developer": "DESARROLLADOR FULL STACK",
-		"paragraph":"Apasionado del desarrollo de software con inclinación hacia el desarrollo web",
-		"openToWork" : "Disponible para trabajar",
-		"buttonDownload":"Descargar curriculum",
-		"buttonPreview":"Vista previa"
+		"paragraph": "Apasionado del desarrollo de software con inclinación hacia el desarrollo web",
+		"openToWork": "Disponible para trabajar",
+		"buttonDownload": "Descargar curriculum",
+		"buttonPreview": "Vista previa"
 	},
-	"Experience" : {
-		"title" : "Experiencia laboral",
-		"FirstExperience" : {
-			"time":"Actualmente",
-			"title" : "Desarrollador full-stack",
-			"habs" : ["desarrollo web", "base de datos", "diseño full-stack"],
-			"description" : "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos."
+	"Experience": {
+		"title": "Experiencia laboral",
+		"FirstExperience": {
+			"name": "La barra boulevard",
+			"date": "Actualmente",
+			"title": "Desarrollador full-stack",
+			"description": "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos.",
+			"habilities": [
+				"desarrollo web",
+				"base de datos",
+				"diseño full-stack"
+			],
+			"type": "laboral",
+			"link": "https://www.instagram.com/labarraboulevard/"
 		},
-		"SecondExperience" : {
-			"time":"2023 - 2024",
-			"title" : "Ayudante de cocina",
-			"habs" : ["gestión del tiempo", "organización", "trabajo en equipo"],
-			"description" : "En el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia."
+		"SecondExperience": {
+			"name": "La barra boulevard",
+			"date": "2023 - 2024",
+			"title": "Ayudante de cocina",
+			"description": "En el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia.",
+			"habilities": [
+				"gestión del tiempo",
+				"organización",
+				"trabajo en equipo"
+			],
+			"type": "laboral",
+			"link": "https://www.instagram.com/labarraboulevard/"
 		},
-		"ThirdExperience" : {
-			"time":"2023 - 2024",
-			"title" : "Mesero",
-			"habs" : ["atención al cliente", "comunicación efectiva", "resolución de conflictos"],
-			"description" : "En este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar múltiples habilidades comunicativas."
+		"ThirdExperience": {
+			"name": "La barra boulevard",
+			"date": "2023 - 2024",
+			"title": "Mesero",
+			"description": "En este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar múltiples habilidades comunicativas.",
+			"habilities": [
+				"atención al cliente",
+				"comunicación efectiva",
+				"resolución de conflictos"
+			],
+			"type": "laboral",
+			"link": "https://www.instagram.com/labarraboulevard/"
 		}
 	},
-	"Formation" : {
-		"title" : "Formación académica"
+	"Formation": {
+		"title": "Formación académica",
+		"FirstFormation": {
+			"name": "Universidad de Ezeiza",
+			"date": "2024 - actual",
+			"title": "Tecnicatura en Desarrollo de Software",
+			"description": "Actualmente en esta carrera me estoy capacitando como desarrollador de software, aprendiendo y reforzando las buenas prácticas y conceptos generales de la programación.",
+			"habilities": [
+				"programación",
+				"computación",
+				"software"
+			],
+			"link": "https://web.upe.edu.ar/"
+		},
+		"SecondFormation": {
+			"name": "Soy Henry",
+			"date": "2023 - 2023",
+			"title": "Desarrollador Full-stack",
+			"description": "En este curso intensivo de desarrollo web tuve la oportunidad de desarrollar múltiples habilidades web y conceptos de programación generales.",
+			"habilities": [
+				"programación",
+				"computación",
+				"software"
+			],
+			"link": "https://www.soyhenry.com/"
+		}
+	},
+	"Stack": {
+		"title": "Tecnologías"
+	},
+	"Projects": {
+		"title": "Proyectos recientes",
+		"project1": {
+			"title": "La Barra Boulevard",
+			"quantity": 1,
+			"description": "La Barra Boulevard es hasta ahora mi proyecto más importante. Se trata de un e-commerce full-stack desarrollado para un restaurante en Chile, que cuenta con una navegación muy intuitiva y una gestión de base de datos sólida.",
+			"stack": [
+				"Javascript",
+				"Next",
+				"React"
+			],
+			"buttonDemo": "Demo",
+			"buttonCode": "Código",
+			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar",
+			"deploy": "https://la-barra-boulevard.vercel.app/"
+		},
+		"project2": {
+			"title": "Vorttex Gaming",
+			"quantity": 8,
+			"description": "Vorttex Gaming es un e-commerce que desarrollamos con mi equipo de estudio, en el cual enfrenté algunos retos que, al superarlos, me ayudaron a mejorar como desarrollador.",
+			"stack": [
+				"Javascript",
+				"Next",
+				"React"
+			],
+			"buttonCode": "Código",
+			"buttonDemo": "Demo",
+			"github": "https://github.com/zuoki/VorttexGaming",
+			"deploy": "https://pf-final-damian-projects.vercel.app/"
+		},
+		"project3": {
+			"title": "Pokedex",
+			"quantity": 1,
+			"description": "Pokedex elaborada con la Poke-Api, con formularios de registro, inicio de sesión y creación de pokemones. También cuenta con ordenamientos, filtros y búsqueda de pokemones.",
+			"stack": [
+				"Javascript",
+				"Vite",
+				"React"
+			],
+			"buttonCode": "Código",
+			"buttonDemo": "Demo",
+			"github": "https://github.com/MartinsDiego17/PI-Pokemon-main"
+		}
+	},
+	"Contact": {
+		"smallTitle": "VAMOS A",
+		"bigTitle": "TRABAJAR",
+		"text": "Llevemos tu proyecto al siguiente nivel",
+		"form": {
+			"firstInputPlaceholder": "Nombre",
+			"secondInputPlaceholder": "Email",
+			"textareaTitle": "Mensaje",
+			"textareaPlaceholder": "Ingresa tu mensaje",
+			"textButton": "Enviar mensaje"
+		}
+	},
+	"Footer": {
+		"text": "Hecho con ♥ por Diego Martins"
 	}
 }

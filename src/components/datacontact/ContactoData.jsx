@@ -1,12 +1,14 @@
 import { Button } from "@nextui-org/react";
 
-const ContactoData = () => {
+const ContactoData = ({ smallTitle, bigTitle, text }) => {
     return (
         <article className="w-1/2 max-sm:w-full flex flex-col justify-center">
             <h2 class="text-[#eee] max-sm:text-center text-[3.5rem] 2xl:text-[4.6rem] leading-none">
-                VAMOS A<br /> TRABAJAR
+                {smallTitle}<br /> {bigTitle}
             </h2>
-            <p class="text-[#aaa] max-sm:text-pretty max-sm:text-center 2xl:text-[1.4rem] ">Llevemos tu proyecto al siguiente nivel</p>
+            <p class="text-[#aaa] max-sm:text-pretty max-sm:text-center 2xl:text-[1.4rem] ">
+                {text}
+            </p>
             <p class="2xl:text-[1.2rem]  text-[.8rem] mt-[2%] text-[#aaa] max-sm:text-center ">
                 <i class="fa-solid pr-[.5%] fa-envelope text-[#eee]"></i> diegomartinsupe@hotmail.com
             </p>

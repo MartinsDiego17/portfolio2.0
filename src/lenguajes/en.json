@@ -1,71 +1,150 @@
 {
 	"Layout": {
-		"title": "Diego Martins | Personal",
-		"description": "Welcome to my portfolio. I'm Aimar, a frontend developer with 2 years of experience creating innovative and functional web solutions. From Panama 🇵🇦, I specialize in the latest web development technologies. Explore my projects and discover how I can help take your business to the next level."
+		"title": "Diego Martins | Portfolio"
 	},
-	"NavBar":{
+	"Header": {
 		"home": "Home",
-		"about-me": "About Me",
-		"skills": "Skills",
-		"projects": "Projects"
-	},
-	"Hero": {
-		"title": "Hi👋🏻! I'm Aimar",
-		"subtitle": "With <span class=\"text-blue-500/90 font-medium\">2 years of experience</span> as a frontend developer, passionate about creating <span class=\"text-yellow-500/90 font-medium\">innovative and functional solutions</span>. From <span class=\"text-red-500/90 font-medium\">Panama</span> 🇵🇦, bringing my talent <span class=\"text-green-500/90 font-medium\">to the world</span>.",
-		"mail": "Email"
-	},
-	"AboutMe": {
-		"title": "About Me",
-		"1st-paragraph": "My name is Aimar, I'm passionate about web development. Since I was young, technology has been my passion. My journey in programming started with Python, but upon discovering HTML, I fully immersed myself in the world of web development.",
-		"2nd-paragraph": "I consider myself a fervent self-learner. Continuously learning and improving is something that motivates me, and I enjoy sharing what I know with others.",
-		"3rd-paragraph": "Throughout my career, I have had the opportunity to work on various projects that have allowed me to grow and acquire new skills. I am committed to continuous improvement and always look for ways to add value to every team I collaborate with."
-	},
-	"Skills": {
-		"title": "Skills",
-		"languages": "Languages",
-		"frameworks": "Frameworks",
-		"no-code": "No Code",
-		"design": "Design",
-		"others": "Others"
-	},
-	"Projects": {
-		"title": "Projects",
-		"project-1": "Calorie Tracker",
-		"description-1": "Web application where you can keep track of your consumed calories along with the calories burned through physical activity. Additionally, you can view the difference, helping you determine if you are in a caloric deficit or surplus.",
-		"project-2": "Weather App",
-		"description-2": "Web application where you can check the weather for various cities around the world with dynamic information fetched from an API.",
-		"project-3": "Tip and Consumption Calculator",
-		"description-3": "A web application that includes a menu where you can place an order and add a tip.",
-		"project-4": "Budget Tracker",
-		"description-4": "Web application where you can manage your budget for either the month or the week. You can add your budget, expenses, edit and delete your expenses, and filter expenses by category.",
-		"code-button": "Code",
-		"contact-button": "Do you wish to quote my services?"
-	},
-	"Footer": {
-		"home": "Home",
-		"about-me": "About Me",
-		"skills": "Skills",
 		"projects": "Projects",
 		"contact": "Contact"
 	},
+	"Presentation": {
+		"smallText": "Hi, my name is",
+		"bigText": "Diego Martins",
+		"developer": "FULL STACK DEVELOPER",
+		"paragraph": "Passionate about software development with a focus on web development",
+		"openToWork": "Open to work",
+		"buttonDownload": "Download resume",
+		"buttonPreview": "Preview"
+	},
+	"Experience": {
+		"title": "Work experience",
+		"FirstExperience": {
+			"name": "La barra boulevard",
+			"date": "Currently",
+			"title": "Full-stack developer",
+			"description": "On this occasion, I was able to implement my technical knowledge for the company I previously worked for, developing and designing a full-stack e-commerce web application with its respective database.",
+			"habilities": [
+				"web development",
+				"database",
+				"full-stack design"
+			],
+			"type": "work",
+			"link": "https://www.instagram.com/labarraboulevard/"
+		},
+		"SecondExperience": {
+			"name": "La barra boulevard",
+			"date": "2023 - 2024",
+			"title": "Kitchen assistant",
+			"description": "As a kitchen assistant, I played a crucial role in the production of tasks in a high-demand environment.",
+			"habilities": [
+				"time management",
+				"organization",
+				"teamwork"
+			],
+			"type": "work",
+			"link": "https://www.instagram.com/labarraboulevard/"
+		},
+		"ThirdExperience": {
+			"name": "La barra boulevard",
+			"date": "2023 - 2024",
+			"title": "Waiter",
+			"description": "In this position, I had the opportunity to perform customer service tasks, which allowed me to develop multiple communication skills.",
+			"habilities": [
+				"customer service",
+				"effective communication",
+				"conflict resolution"
+			],
+			"type": "work",
+			"link": "https://www.instagram.com/labarraboulevard/"
+		}
+	},
+	"Formation": {
+		"title": "Academic background",
+		"FirstFormation": {
+			"name": "Ezeiza University",
+			"date": "2024 - present",
+			"title": "Software Development Technician",
+			"description": "Currently in this program, I am training as a software developer, learning and reinforcing good practices and general programming concepts.",
+			"habilities": [
+				"programming",
+				"computing",
+				"software"
+			],
+			"link": "https://web.upe.edu.ar/"
+		},
+		"SecondFormation": {
+			"name": "Soy Henry",
+			"date": "2023 - 2023",
+			"title": "Full-stack Developer",
+			"description": "In this intensive web development course, I had the opportunity to develop multiple web skills and general programming concepts.",
+			"habilities": [
+				"programming",
+				"computing",
+				"software"
+			],
+			"link": "https://www.soyhenry.com/"
+		}
+	},
+	"Stack": {
+		"title": "Technologies"
+	},
+	"Projects": {
+		"title": "Recent projects",
+		"project1": {
+			"title": "La Barra Boulevard",
+			"quantity": 1,
+			"description": "La Barra Boulevard is currently my most important project. It is a full-stack e-commerce developed for a restaurant in Chile, featuring very intuitive navigation and robust database management.",
+			"stack": [
+				"Javascript",
+				"Next",
+				"React"
+			],
+			"buttonDemo": "Demo",
+			"buttonCode": "Code",
+			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar",
+			"deploy": "https://la-barra-boulevard.vercel.app/"
+		},
+		"project2": {
+			"title": "Vorttex Gaming",
+			"quantity": 8,
+			"description": "Vorttex Gaming is an e-commerce that we developed with my study team. I faced some challenges that, once overcome, helped me improve as a developer.",
+			"stack": [
+				"Javascript",
+				"Next",
+				"React"
+			],
+			"buttonCode": "Code",
+			"buttonDemo": "Demo",
+			"github": "https://github.com/zuoki/VorttexGaming",
+			"deploy": "https://pf-final-damian-projects.vercel.app/"
+		},
+		"project3": {
+			"title": "Pokedex",
+			"quantity": 1,
+			"description": "Pokedex built with the Poke-Api, featuring registration forms, login, and Pokémon creation. It also includes sorting, filtering, and searching for Pokémon.",
+			"stack": [
+				"Javascript",
+				"Vite",
+				"React"
+			],
+			"buttonCode": "Code",
+			"buttonDemo": "Demo",
+			"github": "https://github.com/MartinsDiego17/PI-Pokemon-main"
+		}
+	},
 	"Contact": {
-		"page-title": "Contact | Aimar Bustamante - Frontend Web Developer with 2 years of experience",
-		"page-description": "Contact Aimar, frontend developer. Whether you are a recruiter or a potential client, use the form below to send me an email.",
-		"back-button": "Go back",
-		"title": "Contact",
-		"name-label": "Name",
-		"name-placeholder": "Ex: Jhon Doe",
-		"name-error": "Please, enter your name",
-		"name-success": "<span class=\"font-medium\">Great!</span> Valid name",
-		"email-label": "Email",
-		"email-placeholder": "Ex: jhondoe@email.com",
-		"email-error": "Please, enter a valid email",
-		"email-success": "<span class=\"font-medium\">Great!</span> Valid email",
-		"message-label": "Message",
-		"message-placeholder": "Ex: Hello world",
-		"message-error": "Please, enter your message",
-		"message-success": "<span class=\"font-medium\">Great!</span> Valid message",
-		"submit-button": "Send",
-		"form-success": "Message sent succesfully"
+		"smallTitle": "LET'S",
+		"bigTitle": "WORK",
+		"text": "Take your project to the next level",
+		"form": {
+			"firstInputPlaceholder": "Name",
+			"secondInputPlaceholder": "Email",
+			"textareaTitle": "Message",
+			"textareaPlaceholder": "Enter your message",
+			"textButton": "Send message"
+		}
+	},
+	"Footer": {
+		"text": "Made with ♥ by Diego Martins"
 	}
 }
