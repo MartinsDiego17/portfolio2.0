@@ -50,9 +50,9 @@ const experiencias: Experiencia[] = [
 ---
 
 <div
-    class="h-fit mb-[45vh] w-[70%] max-sm:w-[80%] mx-auto flex flex-col justify-center align-middle"
+    class="h-fit mb-[45vh] max-sm:mb-[20vh] w-[70%] max-sm:w-[80%] mx-auto flex flex-col justify-center align-middle"
 >
-    <h2 id="titleSection">
+    <h2 class="titleSection">
         <i class="fa-solid fa-briefcase opacity-50"></i> Experiencia laboral
     </h2>
     <ol>
@@ -67,12 +67,18 @@ const experiencias: Experiencia[] = [
 </div>
 
 <style is:global>
-    #titleSection {
+    .titleSection {
         font-size: 1.8rem;
         font-weight: 700;
         color: #eee;
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    @media (min-width: 1536px) {
+        .titleSection {
+            font-size: 2.5rem;
+        }
     }
 
     .cardContainer {

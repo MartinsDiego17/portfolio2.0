@@ -1,0 +1,43 @@
+{
+	"Layout": {
+		"title": "Diego Martins | Portfolio"
+	},
+	"Header": {
+		"home": "Inicio",
+		"projects": "Proyectos",
+		"contact": "Contacto"
+	},
+	"Presentation": {
+		"smallText" : "Hola, mi nombre es",
+		"bigText" :"Diego Martins",
+		"developer": "DESARROLLADOR FULL STACK",
+		"paragraph":"Apasionado del desarrollo de software con inclinación hacia el desarrollo web",
+		"openToWork" : "Disponible para trabajar",
+		"buttonDownload":"Descargar curriculum",
+		"buttonPreview":"Vista previa"
+	},
+	"Experience" : {
+		"title" : "Experiencia laboral",
+		"FirstExperience" : {
+			"time":"Actualmente",
+			"title" : "Desarrollador full-stack",
+			"habs" : ["desarrollo web", "base de datos", "diseño full-stack"],
+			"description" : "En esta ocasión pude implementar mis conocimientos técnicos para la empresa en la cuál trabajé anteriormente, desarrollando y diseñando un e-commerce web full stack con su respectiva base de datos."
+		},
+		"SecondExperience" : {
+			"time":"2023 - 2024",
+			"title" : "Ayudante de cocina",
+			"habs" : ["gestión del tiempo", "organización", "trabajo en equipo"],
+			"description" : "En el puesto de ayudante de cocina, desempeñé un rol crucial a la hora de la producción de las tareas en un entorno de alta exigencia."
+		},
+		"ThirdExperience" : {
+			"time":"2023 - 2024",
+			"title" : "Mesero",
+			"habs" : ["atención al cliente", "comunicación efectiva", "resolución de conflictos"],
+			"description" : "En este puesto, tuve la oportunidad de llevar a cabo tareas relacionadas con la atención al cliente, las cuales me permitieron desarrollar múltiples habilidades comunicativas."
+		}
+	},
+	"Formation" : {
+		"title" : "Formación académica"
+	}
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import { MdOutlineWbSunny } from "react-icons/md";
 import LenguajeIcon from "./LenguajeIcon";
 
 import {
@@ -7,7 +6,12 @@ import {
   NavbarContent, NavbarItem, Link, Button
 } from "@nextui-org/react";
 
-
+const smoothScroll = (e, target) => {
+  e.preventDefault();
+  document.querySelector(target).scrollIntoView({
+    behavior: 'smooth'
+  });
+};
 
 export default function app() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -33,23 +37,25 @@ export default function app() {
       <NavbarContent className="hidden sm:flex gap-4 mx-auto" justify="center">
 
         <NavbarItem className="my-0 mx-[10%]" >
-          <Link className="text-[#ccc]" href="#">Inicio</Link>
+          <Link className="text-[#ccc] smooth-scroll " onClick={(e) => smoothScroll(e, '#inicio')}>Inicio</Link>
         </NavbarItem>
 
         <NavbarItem className="my-0 mx-[10%]" >
-          <Link className="text-[#ccc]" href="#">Proyectos</Link>
+          <Link className="text-[#ccc] smooth-scroll " 
+            onClick={(e) => smoothScroll(e, '#proyectos')}>
+            Proyectos
+          </Link>
         </NavbarItem>
 
         <NavbarItem className="my-0 mx-[10%]" >
-          <Link className="text-[#ccc]" href="#">Contacto</Link>
-        </NavbarItem>
-
-        <NavbarItem className="my-0 mx-[10%]" >
-          <MdOutlineWbSunny className="text-[#ccc]" />
+          <Link className="text-[#ccc] smooth-scroll " 
+            onClick={(e) => smoothScroll(e, '#footer')}>
+            Contacto
+          </Link>
         </NavbarItem>
 
         <NavbarItem className="my-0 mx-[10%] flex place-items-center" >
-          <LenguajeIcon/> <span className="text-transparent">hola</span>
+          <LenguajeIcon /> <span className="text-transparent">hola</span>
         </NavbarItem>
 
       </NavbarContent>

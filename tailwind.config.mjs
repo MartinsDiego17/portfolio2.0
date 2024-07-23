@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         sans: ['Onest', ...defaultTheme.fontFamily.serif],
         'max-sm': {'max': '640px'}, 
+        'min-xl': {'min': '1600px'},
         'max-lg': {'max': '1023px'},
       },
     },

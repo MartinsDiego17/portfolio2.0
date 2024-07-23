@@ -3,12 +3,17 @@ import MyDetails from "./inicio/MyDetails";
 import photoPerfil from "../../public/images/presentacion/perfil.webp";
 ---
 
-<div class="w-screen h-screen flex flex-col justify-center max-sm:h-[110vh] mb-[20vh] ">
-    <div class="mt-[10%] w-[70%] mx-auto h-[70%] max-sm:w-[80%] ">
+<div
+id="inicio"
+    class="w-screen h-screen flex flex-col justify-center max-sm:h-[110vh] mb-[20vh] max-sm:mb-[0]"
+>
+    <div class="mt-[10%] w-[70%] mx-auto h-[70%] max-sm:w-[80%]">
         <section class="flex justify-between align-middle">
             <MyDetails client:visible />
 
-            <article class="w-[35%] flex align-middle justify-end max-sm:hidden">
+            <article
+                class="w-[35%] flex align-middle justify-end max-sm:hidden"
+            >
                 <img
                     class="imgPerfil w-3/5 h-[70%] rounded-full"
                     src={photoPerfil.src}
@@ -20,6 +25,12 @@ import photoPerfil from "../../public/images/presentacion/perfil.webp";
 </div>
 
 <style is:global>
+            .gradient-text {
+            background: linear-gradient(to top, rgb(0, 107, 179), #09f, white);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
     h2 {
         font-weight: 900 !important;
     }
@@ -82,10 +93,11 @@ import photoPerfil from "../../public/images/presentacion/perfil.webp";
         }
         15% {
             border-radius: 65% 35% 50% 50% / 40% 60% 50% 50%;
-        }
+        }   
     }
 
     .imgPerfil {
         animation: radiusPic 17s infinite;
     }
+
 </style>

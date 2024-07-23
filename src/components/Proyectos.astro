@@ -4,41 +4,41 @@ import { projects } from "../data/projects";
 import "@fortawesome/fontawesome-free/css/all.css";
 ---
 
-<div class="mb-[45vh] max-sm:w-[90%] max-sm:mx-auto">
-    <h2 id="titleSection">
+<div id="proyectos" class="mb-[45vh] max-sm:mb-[20vh] max-sm:w-[90%] max-sm:mx-auto">
+    <h2 class="titleSection">
         <i class="fa-solid fa-diagram-project opacity-50"></i> Proyectos recientes
     </h2>
     <ul>
         {
             projects.map((project) => (
                 <li class="w-[75%] mx-auto mb-[5%] flex max-sm:block max-sm:mb-[15vh]">
-                    <article class="w-1/2 max-sm:w-[100%] ">
+                    <article class="w-1/2 max-sm:w-[100%] 2xl:flex 2xl:justify-end">
                         <img
-                            class="w-full h-[40vh] max-sm:h-[20vh] rounded-2xl"
+                            class="w-full h-[40vh] 2xl:w-[90%] 2xl:h-[36vh] max-sm:h-[20vh] rounded-2xl"
                             src={project.image.src}
                             alt={project.title}
                         />
                     </article>
 
                     <article class="w-1/2 max-sm:w-[100%] max-sm:mt-[4%] pl-[3%] max-sm:pl-0">
-                        <h2 class="text-[1.4rem] text-[#ddd]">
+                        <h2 class="text-[1.4rem] text-[#ddd] 2xl:text-[2.3rem]">
                             {project.title}
                         </h2>
                         <ul class="flex justify-start mt-[2%] max-sm:mt-[4%] max-sm:mb-[4%]">
                             {project.stack.map((hab) => (
                                 <p
-                                    class={`mr-[2%] rounded-md opacity-80 text-[.8rem] py-[.7%] px-[3%] text-black ${hab}`}
+                                    class={`2xl:text-[1.2rem] mr-[2%] rounded-md opacity-80 text-[.8rem] py-[.7%] px-[3%] text-black ${hab}`}
                                 >
                                     {hab}
                                 </p>
                             ))}
                         </ul>
-                        <p class="mt-[2%] text-balance text-[#ccc]">
+                        <p class="2xl:text-[1.3rem] mt-[2%] text-balance text-[#ccc]">
                             {project.description}
                         </p>
-                            <a href={project.github} target="_blank">
+                        <a href={project.github} target="_blank">
                             <Button
-                                className="mt-[2%] opacity-100 text-[#8ed2ff] max-sm:mt-[5%]"
+                                className="2xl:text-[1.2rem] 2xl:py-[4%] 2xl:px-[6%] mt-[2%] opacity-100 text-[#8ed2ff] max-sm:mt-[5%]"
                                 color="primary"
                                 variant="flat"
                                 client:visible
@@ -47,9 +47,9 @@ import "@fortawesome/fontawesome-free/css/all.css";
                             </Button>
                         </a>
                         {project.deploy && (
-                                <a href={project.deploy} target="_blank">
+                            <a href={project.deploy} target="_blank">
                                 <Button
-                                    className="mt-[2%] opacity-100 text-[#8ed2ff] max-sm:mt-[5%]"
+                                    className="2xl:text-[1.2rem] 2xl:px-[6%] 2xl:py-[4%] mt-[2%] opacity-100 text-[#8ed2ff] max-sm:mt-[5%]"
                                     color="primary"
                                     variant="flat"
                                     client:visible
