@@ -10,10 +10,10 @@
 	"Presentation": {
 		"smallText": "Hola, mi nombre es",
 		"bigText": "Diego Martins",
-		"developer": "DESARROLLADOR FULL STACK",
-		"paragraph": "Apasionado del desarrollo de software con inclinación hacia el desarrollo web",
+		"developer": "FullStack-Developer",
+		"paragraph": "Desarrollador Fullstack de Buenos Aires, Argentina. Apasionado por el desarrollo de software y especializado en desarrollo web. Experto en tecnologías modernas y en crear aplicaciones eficientes y escalables.",
 		"openToWork": "Disponible para trabajar",
-		"buttonDownload": "Descargar curriculum",
+		"buttonDownload": "Descargar cv",
 		"buttonPreview": "Vista previa"
 	},
 	"Experience": {
@@ -101,8 +101,7 @@
 			],
 			"buttonDemo": "Demo",
 			"buttonCode": "Código",
-			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar",
-			"deploy": "https://la-barra-boulevard.vercel.app/"
+			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar"
 		},
 		"project2": {
 			"title": "Vorttex Gaming",

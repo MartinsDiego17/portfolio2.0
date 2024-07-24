@@ -1,0 +1,109 @@
+---
+import { Button } from "@nextui-org/react";
+import { getI18N } from "../lenguajes";
+const { currentLocale }: any = Astro;
+const i18n = getI18N({ currentLocale });
+interface I18N {
+    Presentation: Record<string, string>;
+}
+interface PropsPresentation {
+    smallText: String;
+    bigText: String;
+    developer: String;
+    paragraph: String;
+    openToWork: String;
+    buttonDownload: String;
+    buttonPreview: String;
+}
+const i18nTyped = i18n as I18N & { Presentation: PropsPresentation };
+const { Presentation } = i18nTyped;
+const { bigText, developer, paragraph, openToWork } = Presentation;
+
+const developerFixed = developer.split("-");
+---
+
+<div
+    id="inicio"
+    class="h-screen w-screen flex justify-center place-items-start pt-[2%] father"
+>
+    <div
+        class="max-sm:pt-[30%] w-[60%] h-[70vh text-[#eee] flex flex-col place-items-center pt-[5%] leading-none"
+    >
+        <p class="text-[1.3rem] font-bold">{bigText}</p>
+        <h1
+            class="max-sm:text-[5rem] textGradient font-extrabold mt-[1%] text-[9rem] text-center"
+        >
+            {developerFixed[0]}
+        </h1>
+        <h1
+            class="font-extrabold text-[3.5rem] text-center max-sm:text-[2.5rem]"
+        >
+            {developerFixed[1]}.
+        </h1>
+        <p class="mt-[1%] max-sm:mt-[5%] text-[#aaa] text-center">{paragraph}</p>
+
+        <div
+            class="w-full redes max-sm:mt-[5%] flex justify-center place-items-center mt-[2%] max-sm:block max-sm:text-center"
+        >
+            <p
+                class="max-sm:w-fit max-sm:mx-auto max-sm:mb-[3%] text-[#ddd] bg-[#161616] p-[5px] rounded-md border-1 border-[#333]"
+            >
+                <span
+                    class="2xl:text-[1rem] inline-flex items-center px-2 py-0 text-xs font-semibold rounded-md pointer-events body-primary box-gen"
+                >
+                    <span class="mr-1.5 flex h-3 w-3 items-center">
+                        <span
+                            class="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75 bg-lime-400"
+                        >
+                        </span>
+                        <span
+                            class="relative inline-flex h-2 w-2 rounded-full bg-lime-400"
+                        ></span>
+                    </span>{openToWork}
+                </span>
+            </p>
+            <a
+                href="https://www.linkedin.com/in/diego-martins-563954278/"
+                target="_blank"
+                class="ml-[4%]"
+            >
+                <Button
+                    client:visible
+                    isIconOnly
+                    className="text-[1.2rem] rounded-full bg-transparent text-[#eee]"
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </Button>
+            </a>
+            <a href="https://github.com/MartinsDiego17" target="_blank">
+                <Button
+                    client:visible
+                    isIconOnly
+                    className="text-[1.2rem] rounded-full bg-transparent text-[#eee]"
+                >
+                    <i class="fa-brands fa-github"></i>
+                </Button>
+            </a>
+            <a href="mailto:diegomartinsupe@hotmail.com">
+                <Button
+                    client:visible
+                    isIconOnly
+                    className="text-[1.2rem] rounded-full bg-transparent text-[#eee]"
+                >
+                    <i class="fa-regular fa-envelope"></i>
+                </Button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .textGradient {
+        background: linear-gradient(to right, #6c3bff, #b83ab1);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -5px;
+    }
+</style>

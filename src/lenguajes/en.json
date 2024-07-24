@@ -8,12 +8,12 @@
 		"contact": "Contact"
 	},
 	"Presentation": {
-		"smallText": "Hi, my name is",
+		"smallText": "Hello, my name is",
 		"bigText": "Diego Martins",
-		"developer": "FULL STACK DEVELOPER",
-		"paragraph": "Passionate about software development with a focus on web development",
-		"openToWork": "Open to work",
-		"buttonDownload": "Download resume",
+		"developer": "FullStack-Developer",
+		"paragraph": "Fullstack Developer from Buenos Aires, Argentina. Passionate about software development and specialized in web development. Expert in modern technologies and creating efficient, scalable applications.",
+		"openToWork": "Available for work",
+		"buttonDownload": "Download CV",
 		"buttonPreview": "Preview"
 	},
 	"Experience": {
@@ -101,8 +101,7 @@
 			],
 			"buttonDemo": "Demo",
 			"buttonCode": "Code",
-			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar",
-			"deploy": "https://la-barra-boulevard.vercel.app/"
+			"github": "https://github.com/MartinsDiego17/La-Barra-Sport-Bar"
 		},
 		"project2": {
 			"title": "Vorttex Gaming",
