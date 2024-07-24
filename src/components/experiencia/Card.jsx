@@ -6,7 +6,7 @@ const Card = ({ name, date, title, description, habilities, link }) => {
             <h2 className="font-extrabold mt-[2.5%] text-[#eee] max-sm:text-pretty 2xl:text-[1.3rem]">
                 {title} - <a
                     className="text-[#b9e3ff] border-b-1 border-[transparent] hover:border-[#333] transition duration-150"
-                    href="https://www.instagram.com/labarraboulevard/"
+                    href={link}
                     target="_blank"
                 >{name}</a>
             </h2>
