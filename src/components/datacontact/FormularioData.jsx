@@ -31,8 +31,8 @@ const FormularioData = () => {
   };
 
   return (
-    <article className='w-1/2 flex justify-end items-center'>
-      <form ref={form} onSubmit={sendEmail} className='formContact w-4/5 bg-[#222] h-fit rounded-xl p-[4%]'>
+    <article className='w-1/2 max-sm:w-full flex justify-end items-center'>
+      <form ref={form} onSubmit={sendEmail} className='max-sm:w-full max-sm:mx-auto max-sm:mt-[10%] formContact w-4/5 bg-[#222] h-fit rounded-xl p-[4%]'>
         <Input name='user_name' value={dataMessage.user_name} onChange={handleDataMessage} type="text" className='dark h-[2vh]' label="Nombre" />
         <Input name='user_email' value={dataMessage.user_email} onChange={handleDataMessage} type="email" className='dark h-[2vh] mt-[12%]' label="Email" />
         <Textarea
