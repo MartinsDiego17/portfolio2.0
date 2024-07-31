@@ -32,7 +32,7 @@ export default function app({ home, projects, contact }) {
       id="navbar-container"
     >
       <NavbarContent className="sm:hidden" justify="end">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="bg-[transparent]" />
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="text-[#eee] opacity-100" />
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4 mx-auto" justify="center">
