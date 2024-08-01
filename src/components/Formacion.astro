@@ -17,7 +17,6 @@ const i18n = getI18N({ currentLocale });
 interface PropsFormation {
     title: string;
     FirstFormation: Formacion;
-    SecondFormation: Formacion;
 }
 interface I18N {
     Formation: PropsFormation;
@@ -25,9 +24,10 @@ interface I18N {
 const i18nTyped = i18n as I18N;
 const { Formation } = i18nTyped;
 const formaciones  : Formacion[] = [
-    Formation.FirstFormation,
-    Formation.SecondFormation,
+    Formation.FirstFormation
 ];
+
+console.log(formaciones)
 
 ---
 

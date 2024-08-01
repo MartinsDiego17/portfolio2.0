@@ -71,18 +71,6 @@
 				"software"
 			],
 			"link": "https://web.upe.edu.ar/"
-		},
-		"SecondFormation": {
-			"name": "Soy Henry",
-			"date": "2023 - 2023",
-			"title": "Desarrollador Full-stack",
-			"description": "En este curso intensivo de desarrollo web tuve la oportunidad de desarrollar múltiples habilidades web y conceptos de programación generales.",
-			"habilities": [
-				"programación",
-				"computación",
-				"software"
-			],
-			"link": "https://www.soyhenry.com/"
 		}
 	},
 	"Stack": {
@@ -118,6 +106,21 @@
 			"deploy": "https://pf-final-damian-projects.vercel.app/"
 		},
 		"project3": {
+			"title": "YourHiring",
+			"quantity": 1,
+			"description": "YourHiring es una plataforma de gestión de postulaciones laborales que cuenta con un sistema que le permite a cada usuario personalizar y optimizar su búsqueda laboral.",
+			"stack": [
+				"Typescript",
+				"Astro",
+				"React",
+				"Tailwind"
+			],
+			"buttonCode": "Código",
+			"buttonDemo": "Demo",
+			"github": "https://github.com/MartinsDiego17/YourHiring",
+			"deploy": "https://your-hiring.vercel.app/"
+		},
+		"project4": {
 			"title": "Pokedex",
 			"quantity": 1,
 			"description": "Pokedex elaborada con la Poke-Api, con formularios de registro, inicio de sesión y creación de pokemones. También cuenta con ordenamientos, filtros y búsqueda de pokemones.",

@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 
 import labarra from '../../public/images/proyectos/labarra.jpeg';
 import vorttex from '../../public/images/proyectos/vorttex.jpeg';
+import YourHiring from '../../public/images/proyectos/YourHiring.jpeg';
 import pokedex from '../../public/images/proyectos/pokedex.jpeg';
 
 interface Proyecto {
@@ -21,7 +22,7 @@ interface ProyectoConImagenes extends Proyecto {
     image?: any;
 }
 
-const imagesProjects = [labarra.src, vorttex.src, pokedex.src];
+const imagesProjects = [labarra.src, vorttex.src, YourHiring.src, pokedex.src];
 
 import { getI18N } from "../lenguajes";
 const { currentLocale }: any = Astro;
@@ -32,6 +33,7 @@ interface PropsProjects {
     project1: Proyecto  
     project2: Proyecto  
     project3: Proyecto  
+    project4: Proyecto
 }
 
 interface I18N {
@@ -43,6 +45,7 @@ let projects: ProyectoConImagenes[] = [
     Projects.project1,
     Projects.project2,
     Projects.project3,
+    Projects.project4,
 ];
 
 projects.forEach((pro, index) => {
@@ -130,6 +133,14 @@ projects.forEach((pro, index) => {
     }
     .Vite {
         background-color: #d511e8;
+        color: white;
+    }
+    .Typescript {
+        background-color: #09f;
+        color: white;
+    }
+    .Astro {
+        background-color: #ff9000;
         color: white;
     }
 </style>
