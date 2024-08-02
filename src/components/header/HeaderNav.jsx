@@ -28,7 +28,7 @@ export default function app({ home, projects, contact }) {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="dark border-[transparent] bg-transparent"
+      className="dark border-[transparent] bg-transparent hidden"
       id="navbar-container"
     >
       <NavbarContent className="sm:hidden" justify="end">
