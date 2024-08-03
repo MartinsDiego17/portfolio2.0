@@ -13,14 +13,24 @@ const smoothScroll = (e, target) => {
   });
 };
 
+
 export default function app({ home, projects, contact }) {
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Inicio",
-    "Proyectos",
-    "Contacto"
+    {
+      path: home,
+      link: "inicio"
+    },
+    {
+      path: projects,
+      link: "proyectos"
+    },
+    {
+      path: contact,
+      link: "footer"
+    }
   ];
 
   return (
@@ -28,7 +38,7 @@ export default function app({ home, projects, contact }) {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="dark border-[transparent] bg-transparent hidden"
+      className="dark border-[transparent] bg-transparent"
       id="navbar-container"
     >
       <NavbarContent className="sm:hidden" justify="end">
@@ -66,11 +76,12 @@ export default function app({ home, projects, contact }) {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               className="w-full"
-              href="#"
+              href={`#${item.link}`}
               size="lg"
               color="foreground"
+              onClick={() => setIsMenuOpen(false)}
             >
-              {item}
+              {item.path}
             </Link>
           </NavbarMenuItem>
         ))}
